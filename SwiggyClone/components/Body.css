@@ -1,0 +1,16 @@
+#search-box{
+    height: 40px;
+    border: 1px solid black;
+    margin: 20px;
+    width: 500px;
+    display:flexbox;
+    align-content: center;
+    margin-left: 400px;
+
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    ;
+}
