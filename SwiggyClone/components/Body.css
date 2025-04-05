@@ -3,14 +3,44 @@
     border: 1px solid black;
     margin: 20px;
     width: 500px;
-    display:flexbox;
     align-content: center;
     margin-left: 400px;
 
 }
+#search-box, .search-btn{
+    height: 40px;
+    border: 1px solid black;
+    align-content: center;
+    margin-left: 400px;
+    border-radius: 10px;
+
+    
+}
+.search-btn{
+    margin: 20px;
+    cursor: pointer;
+    position: absolute;
+    content-visibility: visible;
+    height: 43px;
+    margin-left: -17px; 
+    background-color: #FF5200;   
+}
+
 .res-container{
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
-    ;
+    padding: 5px;}
+
+.filter-button{
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    padding : 5px;
+    content-visibility: visible;
+    margin-left: 100px;
+    margin-top: 30px;
+    background-color: #FF5200;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 20px;
 }
