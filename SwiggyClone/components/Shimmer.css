@@ -1,0 +1,23 @@
+.shimmer-card {
+  width: 250px;
+  border: 1px solid black;
+  background-color: #f0f0f0;
+  padding: 5px;
+  margin: 0.5%; 
+  margin-left: 30px;
+  border-radius: 20px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+
+}
+.shimmer-container {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-top: 100px;
+}
