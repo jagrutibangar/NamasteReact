@@ -1,0 +1,13 @@
+
+.menuList{
+    border-top: 1px solid black;
+    height: 130px;
+    padding: 20px;
+    margin-left: 100px;
+    text-align: right;
+    width: 1000px;
+    padding-block: 20px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}
