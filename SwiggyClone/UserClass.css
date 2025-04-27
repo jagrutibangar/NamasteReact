@@ -1,0 +1,12 @@
+.user-card{
+    border: 1px solid black;
+    padding: 5px;
+    width: 300px;
+    border-radius: 15px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.user-avatar{
+    height: 100px;
+}
