@@ -1,5 +1,4 @@
 import React from 'react';
-import './UserClass.css'; // Assuming you have a CSS file for styling
 
 //class component
 class UserClass extends React.Component {
@@ -30,21 +29,21 @@ class UserClass extends React.Component {
 
         const data = await fetch("https://api.github.com/users/jagrutibangar"); // Example API call
         const json = await data.json();
-        console.log(json);
+        //console.log(json);
 
         this.setState({
             userInfo:json, })
     }
 
     render(){
-        console.log("Child Render method called ");
+        //console.log("Child Render method called ");
         const {login, location, avatar_url} = this.state.userInfo;
 
         return (
             <>
-            <div className='user-card'>
+            <div className='border-1 h-90 w-100 mt-1 rounded-4xl space-x-1 m-2 p-10 bg-gray-50 ml-30 text-xl font-medium '>
 
-                <img src={avatar_url} alt="User Avatar" className='user-avatar' />
+                <img src={avatar_url} alt="User Avatar" className='h-50' />
                 <h2>Name: {login}</h2>
                 <h3>Location: {location}</h3>
                 <h3>Contact: sakshibangar@gmail.com</h3>
