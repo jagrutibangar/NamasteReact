@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus.jsx';
+import UserContext from '../utils/UserContext.jsx';
 
 const Header= () =>{
 
@@ -12,6 +13,8 @@ const Header= () =>{
     //If there is any variable passed in the array then, Useeffect is called whenever that variable changes
 
     useEffect(() => {}, [btnnameReact]);
+
+    const {user} = useContext(UserContext);
 
     return(
         <>
@@ -32,8 +35,9 @@ const Header= () =>{
         <button className='bg-orange-400 rounded-3xl mt-4 cursor-pointer font-serif border-1 p-2 m-2' onClick={() => btnnameReact == "Login" ? setbtnnameReact("Logout") : setbtnnameReact("Login")}>{btnnameReact}
         </button>
         </ul>
+        <div className='size-0.5'>{user}</div>
+
         </div>
-         
         </div>
         </>
     )
