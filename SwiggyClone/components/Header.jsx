@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus.jsx';
 import UserContext from '../utils/UserContext.jsx';
+import { useSelector } from 'react-redux';
 
 const Header= () =>{
 
@@ -15,6 +16,12 @@ const Header= () =>{
     useEffect(() => {}, [btnnameReact]);
 
     const {user} = useContext(UserContext);
+
+    //Selector is a Hook that allows you to extract data from the Redux store state, using a selector function.
+    //It is used to read data from the store and subscribe to updates.
+
+    const cartItems = useSelector((store) => store.cart.cartItems) || [];
+    //console.log(cartItems)
 
     return(
         <>
@@ -31,11 +38,11 @@ const Header= () =>{
         <li className='p-4 font-serif'><Link to="/grocery">Grocery</Link></li>
         <li className='p-4 font-serif'><Link to="/about">About Us</Link></li>
         <li className='p-4 font-serif'> <Link to="/contactus">Contact Us</Link></li>
-        <li className='p-4 font-serif'><Link to="/cart">Cart</Link></li>
+        <li className='p-4 font-bold '><Link to="/cart">Cart ({cartItems.length})</Link></li>
         <button className='bg-orange-400 rounded-3xl mt-4 cursor-pointer font-serif border-1 p-2 m-2' onClick={() => btnnameReact == "Login" ? setbtnnameReact("Logout") : setbtnnameReact("Login")}>{btnnameReact}
         </button>
         </ul>
-        <div className='size-0.5'>{user}</div>
+        <div className='font-bold text-xs'>{user}</div>
 
         </div>
         </div>
